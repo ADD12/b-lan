@@ -1,5 +1,5 @@
 {
-  "name": "B-LAN Community Core",
+  "name": "B-LAN Community Core v2.0",
   "description": "A comprehensive local network PIM, community job board, security monitor, and Karma token ledger system for self-governed B-LAN ecosystems.",
   "requestFramePermissions": [
     "camera",
