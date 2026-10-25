@@ -1,0 +1,434 @@
+/**
+ * Stylesheet for B-LAN Plugin V.3.2.0
+ * Responsive widgets for Lite Sign-Up, Member Profile, and Community Directory
+ */
+
+.blan-widget-container {
+    background: #0f172a;
+    border: 1px solid #1e293b;
+    border-radius: 20px;
+    padding: 28px;
+    color: #f1f5f9;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    margin: 20px 0;
+    box-sizing: border-box;
+}
+
+.blan-widget-container *, .blan-widget-container *::before, .blan-widget-container *::after {
+    box-sizing: border-box;
+}
+
+.blan-card {
+    background: #1e293b;
+    border-radius: 16px;
+    padding: 24px;
+    border: 1px solid #334155;
+    position: relative;
+    overflow: hidden;
+}
+
+.blan-loading {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 40px 20px;
+}
+
+.blan-spinner {
+    border: 3px solid rgba(99, 102, 241, 0.1);
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    border-left-color: #6366f1;
+    animation: blan-spin 1s linear infinite;
+    margin-bottom: 16px;
+}
+
+@keyframes blan-spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+/* --- Lite Sign-Up Form Styles --- */
+.blan-signup-card {
+    max-width: 620px;
+    margin: 0 auto;
+    background: linear-gradient(180deg, #1e293b 0%, #0f172a 100%);
+    border: 1px solid #38bdf8;
+    box-shadow: 0 10px 30px -10px rgba(56, 189, 248, 0.2);
+}
+
+.blan-signup-header {
+    text-align: center;
+    margin-bottom: 24px;
+    border-bottom: 1px solid #334155;
+    padding-bottom: 18px;
+}
+
+.blan-badge-chip {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    background: rgba(56, 189, 248, 0.1);
+    color: #38bdf8;
+    border: 1px solid rgba(56, 189, 248, 0.25);
+    border-radius: 20px;
+    padding: 4px 12px;
+    font-size: 11px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    margin-bottom: 12px;
+}
+
+.blan-signup-title {
+    font-size: 22px;
+    font-weight: 800;
+    color: #ffffff;
+    margin: 0 0 6px;
+    letter-spacing: -0.5px;
+}
+
+.blan-signup-subtitle {
+    font-size: 13px;
+    color: #94a3b8;
+    margin: 0;
+    line-height: 1.5;
+}
+
+.blan-form-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.blan-form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.blan-label {
+    font-size: 12px;
+    font-weight: 700;
+    color: #cbd5e1;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.blan-input, .blan-select {
+    width: 100%;
+    background: #0f172a;
+    border: 1px solid #334155;
+    border-radius: 8px;
+    padding: 10px 14px;
+    color: #f1f5f9;
+    font-size: 14px;
+    transition: border-color 0.2s, box-shadow 0.2s;
+    outline: none;
+}
+
+.blan-input:focus, .blan-select:focus {
+    border-color: #38bdf8;
+    box-shadow: 0 0 0 3px rgba(56, 189, 248, 0.2);
+}
+
+.blan-help-text {
+    font-size: 11px;
+    color: #64748b;
+}
+
+.blan-form-actions {
+    margin-top: 10px;
+}
+
+.blan-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    width: 100%;
+    padding: 12px 20px;
+    border-radius: 10px;
+    font-size: 13px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    cursor: pointer;
+    text-decoration: none;
+    transition: transform 0.15s, background-color 0.2s, box-shadow 0.2s;
+    border: none;
+}
+
+.blan-btn:active {
+    transform: scale(0.98);
+}
+
+.blan-btn-primary {
+    background: #4f46e5;
+    color: #ffffff;
+    box-shadow: 0 4px 14px rgba(79, 70, 229, 0.4);
+}
+
+.blan-btn-primary:hover {
+    background: #4338ca;
+}
+
+.blan-btn-secondary {
+    background: #1e293b;
+    color: #cbd5e1;
+    border: 1px solid #475569;
+}
+
+.blan-btn-secondary:hover {
+    background: #334155;
+    color: #ffffff;
+}
+
+/* Success Card */
+.blan-success-card {
+    background: #0f172a;
+    border-radius: 12px;
+    border: 1px solid #10b981;
+    padding: 24px;
+}
+
+.blan-success-header {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    margin-bottom: 18px;
+    border-bottom: 1px solid #1e293b;
+    padding-bottom: 14px;
+}
+
+.blan-success-icon {
+    font-size: 32px;
+    color: #34d399;
+}
+
+.blan-success-title {
+    font-size: 16px;
+    font-weight: 800;
+    color: #ffffff;
+    margin: 0;
+}
+
+.blan-success-subtitle {
+    font-size: 12px;
+    color: #94a3b8;
+    margin: 3px 0 0;
+}
+
+.blan-passport-summary {
+    display: flex;
+    gap: 16px;
+    align-items: center;
+    background: #1e293b;
+    padding: 16px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #334155;
+}
+
+.blan-passport-id {
+    font-family: monospace;
+    font-size: 12px;
+    color: #38bdf8;
+    font-weight: 700;
+    margin-bottom: 6px;
+}
+
+.blan-passport-meta {
+    font-size: 12px;
+    color: #cbd5e1;
+    margin-top: 3px;
+}
+
+.blan-success-nav {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+}
+
+/* --- Profile Details --- */
+.blan-profile-header {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    margin-bottom: 24px;
+    border-bottom: 1px solid #334155;
+    padding-bottom: 20px;
+}
+
+.blan-avatar {
+    width: 64px;
+    height: 64px;
+    border-radius: 50%;
+    border: 2px solid #6366f1;
+    background: #0f172a;
+}
+
+.blan-name {
+    font-size: 20px;
+    font-weight: 800;
+    margin: 0;
+    color: #ffffff;
+    text-transform: uppercase;
+    letter-spacing: -0.5px;
+}
+
+.blan-address {
+    font-size: 13px;
+    color: #94a3b8;
+    margin: 4px 0 0;
+}
+
+/* Stats grid */
+.blan-stats-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 16px;
+    margin-bottom: 24px;
+}
+
+@media (min-width: 600px) {
+    .blan-stats-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+
+.blan-stat-box {
+    background: #0f172a;
+    border-radius: 12px;
+    padding: 16px;
+    border: 1px solid #1e293b;
+    text-align: center;
+}
+
+.blan-stat-label {
+    font-size: 11px;
+    color: #64748b;
+    text-transform: uppercase;
+    font-weight: 800;
+    letter-spacing: 1px;
+}
+
+.blan-stat-value {
+    font-size: 28px;
+    font-weight: 900;
+    margin-top: 6px;
+}
+
+.blan-stat-value.karma {
+    color: #818cf8;
+}
+
+.blan-stat-value.solar {
+    color: #fbbf24;
+}
+
+/* Skills list */
+.blan-skills-section {
+    margin-top: 20px;
+}
+
+.blan-skills-title {
+    font-size: 12px;
+    color: #cbd5e1;
+    text-transform: uppercase;
+    font-weight: 800;
+    letter-spacing: 1px;
+    margin-bottom: 12px;
+}
+
+.blan-skills-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+.blan-skill-tag {
+    background: rgba(99, 102, 241, 0.1);
+    color: #a5b4fc;
+    border: 1px solid rgba(99, 102, 241, 0.2);
+    padding: 6px 12px;
+    border-radius: 8px;
+    font-size: 12px;
+    font-weight: 600;
+}
+
+/* Directory view grid */
+.blan-directory-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 16px;
+}
+
+@media (min-width: 600px) {
+    .blan-directory-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+
+@media (min-width: 900px) {
+    .blan-directory-grid {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+}
+
+.blan-member-card {
+    background: #1e293b;
+    border: 1px solid #334155;
+    border-radius: 16px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    transition: transform 0.2s, border-color 0.2s;
+}
+
+.blan-member-card:hover {
+    transform: translateY(-2px);
+    border-color: #6366f1;
+}
+
+.blan-member-info {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 16px;
+}
+
+.blan-member-avatar {
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    background: #0f172a;
+    border: 1.5px solid #6366f1;
+}
+
+.blan-member-name {
+    font-size: 15px;
+    font-weight: 700;
+    color: white;
+    margin: 0;
+}
+
+.blan-member-address {
+    font-size: 11px;
+    color: #64748b;
+    margin: 2px 0 0;
+}
+
+.blan-member-stats {
+    display: flex;
+    justify-content: space-between;
+    background: #0f172a;
+    border-radius: 10px;
+    padding: 10px 14px;
+    font-size: 11px;
+    font-weight: bold;
+}
